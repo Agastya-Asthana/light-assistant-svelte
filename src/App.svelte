@@ -6,6 +6,9 @@
   let BedroomOnClick = function () {
     isOn = !isOn;
   };
+
+  let message = "Hello world this is\n what the font is";
+  let showConsole = $state(false);
 </script>
 
 <div id="background">
@@ -16,10 +19,13 @@
   </div>
   <div id="one-two">
     <Button label="Lamp"
-          checked={isOn}></Button>
+          checked={isOn}
+          on:click={() => showConsole = !showConsole}></Button>
   </div>
   <div id="three-three">
-    <Console color="green" message="Hello World!"></Console>
+    {#if showConsole}
+    <Console color="green" message={message}></Console>
+    {/if}
   </div>
   
 </div>
