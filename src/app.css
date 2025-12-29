@@ -1,0 +1,6 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;      /* ensures 100vh works correctly in Safari */
+  width: 100%;
+}
